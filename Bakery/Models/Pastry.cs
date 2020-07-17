@@ -1,12 +1,14 @@
 using System;
 // using System.Collections.Generic; if List??
 
-namespace Bakery.Models
+namespace Bakery
 {
   public class Pastry
   {
-
-    // properties, methods, etc. will go here.
-
+    public int PastryOrder { get; set; }
+    public int TallyPastryOrder(int pastryOrder)
+    {
+      return 0;
+    }
   }
 }

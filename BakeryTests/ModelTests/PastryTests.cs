@@ -3,11 +3,14 @@ using Bakery;
 
 namespace Bakery.Tests
 {
-  // [TestClass]
-  // public class PastryTests
-  // {
-  //   [TestMethod]
-
-  //   // Test method will go here
-  // }
+  [TestClass]
+  public class PastryTests
+  {
+     [TestMethod]
+    public void TallyPastryOrder_Charges2DollarsForEachPastry_True()
+    {
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(2, testPastry.TallyPastryOrder(1));
+    }
+  }
 }
