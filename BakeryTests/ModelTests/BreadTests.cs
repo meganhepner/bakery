@@ -13,6 +13,13 @@ namespace Bakery.Tests
       Assert.AreEqual(5, testBread.TallyOrder(1));
     }
 
+      [TestMethod]
+    public void TallyOrder_DoesNottChargeForEveryThirdLoaf_True()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(10, testBread.TallyOrder(3));
+    }
+
     
   }
 }
