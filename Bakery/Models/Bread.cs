@@ -6,6 +6,11 @@ namespace Bakery
   public class Bread
   {
     public int BreadOrder { get; set; }
+  
+    public Bread(int breadOrder)
+    {
+      BreadOrder = breadOrder;
+    }
     private int _breadOrder;
     public int TallyBreadOrder(int breadOrder)
     {

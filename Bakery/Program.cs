@@ -20,9 +20,10 @@ namespace Bakery.Models
           Console.WriteLine("How many loaves would you like to purchase?");
           string userBreadInput = Console.ReadLine();
           int breadOrder = int.Parse(userBreadInput);
-          Bread newBread = new Bread();
+          Bread newBread = new Bread(breadOrder);
           int breadTotal = newBread.TallyBreadOrder(breadOrder);
           Console.WriteLine("Your order total is $" + breadTotal);
+          Console.WriteLine(newBread.BreadOrder);
         }
         else
         {
