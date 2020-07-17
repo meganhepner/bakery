@@ -5,16 +5,13 @@ namespace Bakery
 {
   public class Bread
   {
-    public int BreadOrder { get; set; }
-    private static List<int> _orders = new List<int> {};
-  
     public Bread(int breadOrder)
     {
       BreadOrder = breadOrder;
-      _orders.Add(BreadOrder);
-
     }
-    private int _breadOrder;
+    public int BreadOrder { get; set; }
+    private static List<int> _orders = new List<int> {};
+  
     public int TotalBreadOrder()
     {
       int total = 0;
@@ -24,6 +21,12 @@ namespace Bakery
       }
       return total;
     }
+
+    public void AddOrderToList (int order)
+    {
+      _orders.Add(order);
+    }
+
     public int TallyBreadOrder(int breadOrder)
     {
       int currentOrder = 0;

@@ -10,9 +10,7 @@ namespace Bakery
     public Pastry(int pastryOrder)
     {
       PastryOrder = pastryOrder;
-      _orders.Add(PastryOrder);
     }
-    private int _pastryOrder;
     public int TotalPastryOrder()
     {
       int total = 0;
@@ -21,6 +19,10 @@ namespace Bakery
         total = total + order;
       }
       return total;
+    }
+    public void AddOrderToList (int order)
+    {
+      _orders.Add(order);
     }
     public int TallyPastryOrder(int pastryOrder)
     {
