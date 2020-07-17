@@ -14,7 +14,7 @@ namespace Bakery.Models
       Pastry newPastry = new Pastry(0);
       if (menu == "Y" || menu == "y")
       {
-        Console.WriteLine("**Whole Wheat Loaves $6");
+        Console.WriteLine("Whole Wheat Loaves $6");
         Console.WriteLine("**Sale!** Sourdough Boules $5 or Buy 2 Get 1 Free");
         Console.WriteLine("**Sale!** Sugar Cookies $2 or 3 for $5");
         Console.WriteLine("How many Whole Wheat Loaves would you like to purchase? If none, please enter 0!");

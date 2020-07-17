@@ -24,11 +24,11 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void TotalOrder_AddsOrdersInList_Int()
+    public void AddOrderToList_AddsOrders_Int()
     {
       Bread testBread = new Bread(0);
-      List<int> newList = new List<int> { 5, 5 };
-      Assert.AreEqual(10, testBread.TotalOrder());
+      testBread.AddOrderToList(10);
+      Assert.AreEqual(10, testBread.TotalBreadOrder());
 }
 
     [TestMethod]
