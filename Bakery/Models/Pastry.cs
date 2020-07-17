@@ -6,6 +6,7 @@ namespace Bakery
   public class Pastry
   {
     public int PastryOrder { get; set; }
+    private int _pastryOrder;
     public int TallyPastryOrder(int pastryOrder)
     {
       int currentOrder = 0;
