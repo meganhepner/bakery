@@ -6,6 +6,7 @@ namespace Bakery
   public class Bread
   {
     public int BreadOrder { get; set; }
+    public int BreadTotal {get; set; }
     private int _breadOrder;
     public int TallyBreadOrder(int breadOrder)
     {
@@ -26,7 +27,8 @@ namespace Bakery
 
     // public void PrintOrder ()
     // {
-
+    //   int BreadTotal = Bread.TallyBreadOrder();
+    //   Console.WriteLine(currentOrder);
     // }
 
     // properties, methods, etc. will go here.
