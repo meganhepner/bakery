@@ -39,7 +39,7 @@ namespace Bakery.Models
           }
           else
           {
-            Console.Write("Your order total is $" + (breadTotal + pastryTotal));
+            Console.Write("Your order total is $I don't know!!");
           }
         }
 
