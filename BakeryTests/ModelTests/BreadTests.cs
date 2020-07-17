@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery;
+using System.Collections.Generic;
 
 namespace Bakery.Tests
 {
@@ -21,6 +22,14 @@ namespace Bakery.Tests
       int result = newBread.BreadOrder;
       Assert.AreEqual(breadOrder, result);
     }
+
+    [TestMethod]
+    public void TotalOrder_AddsOrdersInList_Int()
+    {
+      Bread testBread = new Bread(0);
+      List<int> newList = new List<int> { 5, 5 };
+      Assert.AreEqual(10, testBread.TotalOrder());
+}
 
     [TestMethod]
     public void TallyBreadOrder_Charges5DollarsPerLoaf_True()
