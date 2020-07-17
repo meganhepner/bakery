@@ -10,6 +10,8 @@ namespace Bakery.Models
     {
       Console.WriteLine("Welcome to Pierre's Bakery! Press ['Y'] to see today's offerings");
       string menu = Console.ReadLine();
+      Bread newBread = new Bread(0);
+      Pastry newPastry = new Pastry(0);
       if (menu == "Y" || menu == "y")
       {
         Console.WriteLine("**Sale!** Sourdough Boules $5 or Buy 2 Get 1 Free");
@@ -21,10 +23,8 @@ namespace Bakery.Models
           Console.WriteLine("How many loaves would you like to purchase?");
           string userBreadInput = Console.ReadLine();
           int breadOrder = int.Parse(userBreadInput);
-          Bread newBread = new Bread(breadOrder);
           int breadTotal = newBread.TallyBreadOrder(breadOrder);
           Console.WriteLine("Your order total is $" + breadTotal);
-          Console.WriteLine(newBread.BreadOrder);
         }
         else
         {
@@ -35,13 +35,12 @@ namespace Bakery.Models
             Console.WriteLine("How many pastries would you like to purchase?");
             string userPastryInput = Console.ReadLine();
             int pastryOrder = int.Parse(userPastryInput);
-            Pastry newPastry = new Pastry();
             int pastryTotal = newPastry.TallyPastryOrder(pastryOrder);
             Console.WriteLine("Your order total is $" + pastryTotal);
           }
           else
           {
-            Console.Write("Your order total is $I don't know!!");
+            Console.Write("Your order total is $" + (newBread.TotalBreadOrder() + newPastry.TotalPastryOrder()));
           }
         }
 

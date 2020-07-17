@@ -6,7 +6,22 @@ namespace Bakery
   public class Pastry
   {
     public int PastryOrder { get; set; }
+    private static List<int> _orders = new List<int> {};
+    public Pastry(int pastryOrder)
+    {
+      PastryOrder = pastryOrder;
+      _orders.Add(PastryOrder);
+    }
     private int _pastryOrder;
+    public int TotalPastryOrder()
+    {
+      int total = 0;
+      foreach(int order in _orders)
+      {
+        total = total + order;
+      }
+      return total;
+    }
     public int TallyPastryOrder(int pastryOrder)
     {
       int currentOrder = 0;

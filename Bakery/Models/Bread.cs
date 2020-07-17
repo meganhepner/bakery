@@ -15,9 +15,14 @@ namespace Bakery
 
     }
     private int _breadOrder;
-    public int TotalOrder()
+    public int TotalBreadOrder()
     {
-      return 0;
+      int total = 0;
+      foreach(int order in _orders)
+      {
+        total = total + order;
+      }
+      return total;
     }
     public int TallyBreadOrder(int breadOrder)
     {
