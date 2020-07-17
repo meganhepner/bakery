@@ -17,7 +17,7 @@ namespace Bakery.Tests
     public void TallyOrder_DoesNottChargeForEveryThirdLoaf_True()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(10, testBread.TallyOrder(3));
+      Assert.AreEqual(30, testBread.TallyOrder(9));
     }
 
     

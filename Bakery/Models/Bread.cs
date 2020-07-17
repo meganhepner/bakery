@@ -11,7 +11,14 @@ namespace Bakery
       int currentOrder = 0;
       for (int i = 1; i <= breadOrder; i++)
       {
+        if (i%3 == 0)
+        {
+          currentOrder += 0;
+        }
+        else
+        {
         currentOrder += 5;
+        }
       }
       return currentOrder;
     }
